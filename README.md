@@ -1,0 +1,10 @@
+# Lossless DKC2
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?logo=bootstrap&logoColor=white)
+
+Just keeping track of attempts of myself and Shag trying to complete DKC2 without losing a life, in a single run.  
+Because data and because want to remember how well we did (also how ends the most runs...)  
+   
+Vanilla web dev structure. Hosted on my [github pages](https://mctipper.github.io/lossless-dkc2) because easy.
