@@ -5,6 +5,6 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?logo=bootstrap&logoColor=white)
 
 Just keeping track of attempts of myself and Shag trying to complete DKC2 without losing a life, in a single run.  
-Because data and because want to remember how well we did (also how ends the most runs...)  
+Because data and because we want to remember how well we did (also who ends the most runs...)  
    
 Vanilla web dev structure. Hosted on my [github pages](https://mctipper.github.io/lossless-dkc2) because easy.
