@@ -70,5 +70,13 @@
         "deathPlayer": "Shag",
         "deathCharacter": "Diddy",
         "success": false
+    },
+    "10": {
+        "date": "2025-08-03",
+        "world": "3",
+        "level": "1",
+        "deathPlayer": "Shag",
+        "deathCharacter": "Dixie",
+        "success": false
     }
 }
