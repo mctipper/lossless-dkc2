@@ -8,3 +8,5 @@ Just keeping track of attempts of myself and Shag trying to complete DKC2 withou
 Because data and because we want to remember how well we did (also who ends the most runs...)  
    
 Vanilla web dev structure. Hosted on my [github pages](https://mctipper.github.io/lossless-dkc2) because easy.
+
+For local dev just open live server on port and then simply navigate to said port on localhost
