@@ -29,13 +29,24 @@ function buildLevelAttemptAxis(levelsData) {
     return levelMap;
 }
 
-export function buildAttemptBar(gameModels, levelsData) {
+export function buildAttemptBar(gameModels, levelsData, sortedByLevel = false) {
     const levelMap = buildLevelAttemptAxis(levelsData);
 
-    gameModels.reverse(); // reverse the order so the most recent attempt is at the top
+    let modelsForChart = {}
+    if (!sortedByLevel) {
+        modelsForChart = gameModels.reverse(); // reverse the order so the most recent attempt is at the top
+    } else {
+        modelsForChart = [...gameModels].sort((a, b) => {
+            const aLevel = levelMap.find(l => l.world === a.world && l.level === a.level);
+            const bLevel = levelMap.find(l => l.world === b.world && l.level === b.level);
+            const aX = aLevel ? aLevel.x : 0;
+            const bX = bLevel ? bLevel.x : 0;
+            return bX - aX;
+        });
+    }
 
     // data prep, massage it so can be made use of for both bar and point components of the chart
-    const datasets = gameModels.map((attempt, index) => {
+    const datasets = modelsForChart.map((attempt, index) => {
         const AttemptLevel = levelMap.find(l => l.world === attempt.world && l.level === attempt.level);
         const maxX = Math.max(...levelMap.map(level => level.x)); // for 'success = true', ensure bar / point can go full length
         const AttemptX = AttemptLevel ? AttemptLevel.x : maxX; // if null, make it full length as success wont have Attempt indicator
@@ -43,12 +54,12 @@ export function buildAttemptBar(gameModels, levelsData) {
         const isSuccess = attempt.success;
 
         return {
-            label: `Attempt ${gameModels.length - index}`,
+            label: `Attempt ${modelsForChart.length - index}`,
             data: [
                 {
                     x: AttemptX,
-                    y: gameModels.length - index - 1,
-                    attempt: gameModels.length - index,
+                    y: modelsForChart.length - index - 1,
+                    attempt: modelsForChart.length - index,
                     success: attempt.success,
                     deathPlayer: attempt.deathPlayer,
                     deathCharacter: attempt.deathCharacter,
@@ -63,7 +74,12 @@ export function buildAttemptBar(gameModels, levelsData) {
     });
 
     // chart rendering
-    const ctx = document.getElementById('attemptBar').getContext('2d');
+    let ctx = ""
+    if (!sortedByLevel) {
+        ctx = document.getElementById('attemptBar').getContext('2d');
+    } else {
+        ctx = document.getElementById('attemptBarByLevel').getContext('2d');
+    }
     const chart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -178,7 +194,12 @@ export function buildAttemptBar(gameModels, levelsData) {
     const basePadding = 100;
     const dynamicHeight = totalBars * barHeight + basePadding;
 
-    const canvas = document.getElementById('attemptBar');
+    let canvas = ""
+    if (!sortedByLevel) {
+        canvas = document.getElementById('attemptBar');
+    } else {
+        canvas = document.getElementById('attemptBarByLevel');
+    }
     canvas.style.height = `${dynamicHeight}px`;
     canvas.style.width = "100%"; // as we modify the height, reset the width
 

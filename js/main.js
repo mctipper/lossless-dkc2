@@ -29,9 +29,7 @@ import { buildProgressBar } from './charts/barProgress.js'
 
         // game attempt
         buildAttemptBar(gameModels, levelsData)
-
-        // game progress
-        buildProgressBar(gameModels, levelsData)
+        buildAttemptBar(gameModels, levelsData, true)
 
     } catch (error) {
         console.error("Error in main script:", error);
