@@ -13,7 +13,7 @@ function buildLevelAttemptAxis(levelsData) {
             world: worldInt.toString(),
             level: '0',
             name: '',
-            x: parseFloat(`${worldInt}.0`) 
+            x: parseFloat(`${worldInt}.0`)
         });
 
         // populate
@@ -169,14 +169,14 @@ export function buildAttemptBar(gameModels, levelsData, sortedByLevel = false) {
                             ctx.beginPath();
                             ctx.arc(
                                 x, y, // dot centre
-                                15, // dot size
+                                8, // dot size
                                 0, Math.PI * 2
                             );
                             ctx.fillStyle = isSuccess
                                 ? successColour
                                 : characterColours[attempt.deathCharacter] || 'gray';
                             ctx.fill();
-                            ctx.lineWidth = 5;
+                            ctx.lineWidth = 3;
                             ctx.strokeStyle = isSuccess
                                 ? successColour
                                 : playerColours[attempt.deathPlayer] || 'gray';
@@ -189,9 +189,9 @@ export function buildAttemptBar(gameModels, levelsData, sortedByLevel = false) {
     })
 
     // custom formatting to ensure bars are nicely sized and dynamically displayed
-    const barHeight = 40;
-    const totalBars = gameModels.length;
-    const basePadding = 100;
+    const barHeight = 20;
+    const totalBars = modelsForChart.length;
+    const basePadding = 50;
     const dynamicHeight = totalBars * barHeight + basePadding;
 
     let canvas = ""
