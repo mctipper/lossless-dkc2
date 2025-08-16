@@ -5,7 +5,6 @@ import { buildPieCharacterDeath } from './charts/pieCharacterDeath.js'
 import { buildPlayerCharacterDeathBarChart } from './charts/barPlayerCharacterDeath.js'
 import { buildStreakPlot } from './charts/linePlayerDeathStreak.js'
 import { buildAttemptBar } from './charts/barAttempt.js'
-import { buildProgressBar } from './charts/barProgress.js'
 
 
 (async function main() {
