@@ -78,5 +78,77 @@
         "deathPlayer": "Shag",
         "deathCharacter": "Dixie",
         "success": false
+    },
+    "11": {
+        "date": "2025-08-16",
+        "world": "1",
+        "level": "6",
+        "deathPlayer": "Shag",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "12": {
+        "date": "2025-08-16",
+        "world": "3",
+        "level": "3",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Diddy",
+        "success": false
+    },
+    "13": {
+        "date": "2025-08-16",
+        "world": "3",
+        "level": "3",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "14": {
+        "date": "2025-08-16",
+        "world": "2",
+        "level": "4",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "15": {
+        "date": "2025-08-16",
+        "world": "3",
+        "level": "4",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "16": {
+        "date": "2025-08-16",
+        "world": "2",
+        "level": "5",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "17": {
+        "date": "2025-08-16",
+        "world": "3",
+        "level": "4",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "18": {
+        "date": "2025-08-16",
+        "world": "1",
+        "level": "3",
+        "deathPlayer": "Mog",
+        "deathCharacter": "Dixie",
+        "success": false
+    },
+    "19": {
+        "date": "2025-08-16",
+        "world": "3",
+        "level": "4",
+        "deathPlayer": "Shag",
+        "deathCharacter": "Diddy",
+        "success": false
     }
 }
